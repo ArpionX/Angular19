@@ -1,0 +1,82 @@
+
+
+/*-----------------fondo negro------------------*/
+.fondoNegro{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  overflow: hidden;
+
+}
+
+/*---------------------Menu---------------------*/
+.menu{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  background-color: #ebebeb;
+}
+.menuBotonCerrar{
+  background-color: rgb(93, 82, 143);
+}
+.aparecer{
+  animation-name: aparecer;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  display: block;
+}
+.desaparecer{
+  animation-name: desaparecer;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  display: block;
+}
+.linksMenu{
+  transition: background-color 0.5s;
+}
+.linksMenu > a{
+  transition: transform 0.5s;
+}
+.linksMenu:hover{
+  background-color: rgba(150, 150, 150, 0.411);
+}
+.linksMenu:hover > a{
+  transform: translateX(5px);
+}
+
+/*----------------------------Animaciones menu--------------*/
+@keyframes aparecer {
+  0% {
+  opacity: 0; }
+  100% {
+    opacity: 1; }
+}
+@keyframes desaparecer {
+  0% {
+    opacity: 1;}
+  100% {
+    opacity: 0; }
+}
+
+/*--------------------------Header Hovers---------------------------*/
+button{
+  width: 24px;
+  height: 24px;
+}
+i{
+  padding-top: 4px;
+}
+li>a{
+  transition: all 0.2s ease-in;
+}
+li:hover > a{
+  color: rgba(150, 150, 150, 0.411);
+}

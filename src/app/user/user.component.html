@@ -1,0 +1,39 @@
+<p class="usuario">user works!</p>
+<p>Usuario: {{Username}}</p>
+<p id="app">{{Username}} framework favorito: {{frameworkFavorito}}</p>
+<div id="elemento">
+  <label for="framework">
+    <input type="text" name="" id="framework" [(ngModel)]="frameworkFavorito">
+  </label>
+</div>
+<form action="" [formGroup]="formularioPerfil">
+  <label for="nombre">nombre:
+    <input type="text" name="name" id="nombre" formControlName="name" required>
+  </label>
+  <label for="email">email:
+    <input type="text" name="email" id="email" formControlName="email" required>
+  </label>
+  <button type="submit" (click)="handleSubmit()" [disabled]="!formularioPerfil.valid">enviar alerta</button>
+</form>
+<div>
+  <h2>Formulario</h2>
+  <div>
+    <p>Nombre: {{formularioPerfil.value.name}}</p>
+    <p>email: {{formularioPerfil.value.email}}</p>
+  </div>
+</div>
+<form action="/submit" method="POST">
+  <label for="name">Nombre:</label>
+  <input type="text" id="name" name="name" required>
+  <br><br>
+
+  <label for="email">Correo electrónico:</label>
+  <input type="email" id="email" name="email" required>
+  <br><br>
+
+  <button type="submit">Enviar</button>
+</form>
+
+<label for="dom">
+  <input type="text" class="rango" id="dom">
+</label>

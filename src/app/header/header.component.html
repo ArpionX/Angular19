@@ -1,0 +1,53 @@
+<div class="fixed w-full z-50 backdrop-blur-lg flex justify-center py-2">
+  <div class="flex w-full max-w-screen-sm lg:max-w-screen-lg justify-between px-3 ">
+      <div class="w-52 flex text-xl font-semibold">
+        ANDRES POZO
+      </div>
+      <nav class="hidden lg:flex w-[500px] ">
+        <ul class="w-[500px] flex justify-between text-lg">
+          <li class="font-medium">
+            <a routerLink="/" routerLinkActive="Active" ariaCurrentWhenActive="page" class="">Home
+            </a>
+          </li>
+          <li class="">
+            <a routerLink="/user" class=" ">Another</a>
+          </li>
+          <li class="">
+            <a routerLink="/futuro" routerLinkActive="Active" ariaCurrentWhenActive="page" class="">Futuro
+            </a>
+          </li>
+          <li class="">
+            <a routerLink="/galery" routerLinkActive="Active" ariaCurrentWhenActive="page" class="">Galeria</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex justify-end flex-auto lg:hidden">
+        <button type="button" (click)="toggleMenu()">
+          <i class="material-icons">menu</i>
+        </button>
+      </div>
+  </div>
+</div>
+
+<div [class.fondoNegrooo]="isMenuOpen" (click)="toggleMenu()">
+  <section class="menu" [class.aparecer]="isMenuOpen" [class.desaparecer]="!isMenuOpen && hasMenuOpened">
+    <div class="flex flex-col">
+      <div class="bg-slate-400 h-auto p-3" (click)="toggleMenu()">
+        <button class="" type="menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+            <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+
+        </button>
+      </div>
+      <nav class="flex flex-col flex-1 ">
+          <ul class="flex flex-col text-xl font-medium">
+            <li [class]="linksMenu"><a class="p-4 pr-20" href="/">Home</a></li>
+            <li [class]="linksMenu"><a class="p-4 pr-20" href="/user">Usuario</a></li>
+            <li [class]="linksMenu"><a class="p-4 pr-20" href="/futuro">Futuro</a></li>
+          </ul>
+      </nav>
+    </div>
+  </section>
+</div>
+

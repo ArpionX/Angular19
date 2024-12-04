@@ -1,0 +1,60 @@
+
+<p>home works!</p>
+<p>🐢 all the way down {{ items.length }}</p>
+<a routerLink="hola">wow</a>
+<div>este es el app component, o todo lo que va a cambiar</div>
+<button></button>
+@if (corriendo) {
+  <p>se esta corriendo la app</p>
+}@else {
+  <p>no se corre nada</p>
+}
+@for (os of operatingSystems; track os.id) {
+  <p>{{os.id}}</p>
+}
+@for (users of usuarios; track $index) {
+  <p>{{users.name}} {{users.id}}</p>
+}
+
+<div class="editable" [contentEditable]="esEditable"> este contenido es editable pariencdo un input pero es un div PROPERTY BINDING</div>
+<button (click)="mouseClick()"> boton para que console actue EVENT BINDING EVENT HANDELING</button>
+<button (click)="greet()">greetings</button>
+<section (mouseover)="onMouseOver()" (mouseleave)="onMouseOut()">
+  <p>hay una sorpresa si pasas el mouse (uso de event handeling ) {{message}}</p>
+</section>
+<div>
+  <ul>
+    <li>
+      <p>imagen estatica</p>
+      <img ngSrc="/assets/AndresPozo.jpg" alt="Imagen Andres" width="100" height="100">
+    </li>
+    <li style="height: 150px ; width: 150px; position: relative;">
+      <section style="height: 150px ; width: 150px; background-color: aquamarine;">
+        <p>imagen dinamica</p>
+        <img [ngSrc]="imagenDinamica" [alt]="alternativeMessage" fill="" style="opacity: 0.5;"/>
+      </section>
+    </li>
+  </ul>
+</div>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptate similique maxime provident consequuntur saepe facere? Ipsam, fuga sed quia in quos autem, omnis, vitae blanditiis porro voluptas necessitatibus laudantium.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illum commodi praesentium, deserunt labore expedita temporibus, inventore molestias, ipsa tenetur doloribus adipisci perferendis placeat at sint voluptate accusantium illo nam.
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae sint corrupti libero distinctio odit. Rerum voluptatem, libero quibusdam veniam sit, repudiandae placeat tenetur cum quo nesciunt hic officia atque assumenda?
+</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias commodi excepturi culpa ullam. Autem, culpa saepe quisquam obcaecati quam, aperiam consequuntur ipsum nihil tempore incidunt veritatis tenetur reprehenderit at adipisci.
+</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias commodi excepturi culpa ullam. Autem, culpa saepe quisquam obcaecati quam, aperiam consequuntur ipsum nihil tempore incidunt veritatis tenetur reprehenderit at adipisci.
+</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias commodi excepturi culpa ullam. Autem, culpa saepe quisquam obcaecati quam, aperiam consequuntur ipsum nihil tempore incidunt veritatis tenetur reprehenderit at adipisci.
+</p>
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias commodi excepturi culpa ullam. Autem, culpa saepe quisquam obcaecati quam, aperiam consequuntur ipsum nihil tempore incidunt veritatis tenetur reprehenderit at adipisci.
+</p>
+<app-user/>
+<div id="hola">
+  hola
+</div>
+<app-hijo trabajo="jugador de valo" name="andres" (eventoAggItem)="agregarItemPadre($event)" />
