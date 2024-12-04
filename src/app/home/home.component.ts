@@ -1,15 +1,13 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
-import { FuturoComponent } from "../futuro/futuro.component";
 import { HijoComponent } from '../hijo/hijo.component';
-import { UserComponent } from "../user/user.component";
+import { UserComponent } from '../user/user.component';
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [NgOptimizedImage, HijoComponent, RouterLink, RouterOutlet, FuturoComponent, UserComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+    selector: 'app-home',
+    standalone: true,
+    imports: [NgOptimizedImage, HijoComponent, UserComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css'
 })
 export class HomeComponent {
   corriendo= false;

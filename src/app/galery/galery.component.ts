@@ -3,11 +3,10 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-galery',
-  standalone: true,
-  imports: [NgOptimizedImage, RouterLink],
-  templateUrl: './galery.component.html',
-  styleUrl: './galery.component.css'
+    selector: 'app-galery',
+    imports: [NgOptimizedImage, RouterLink],
+    templateUrl: './galery.component.html',
+    styleUrl: './galery.component.css'
 })
 export class GaleryComponent {
 

@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+
 @Component({
-  selector: 'app-user',
-  standalone: true,
-  imports: [FormsModule, ReactiveFormsModule],
-  templateUrl: './user.component.html',
-  styleUrl: './user.component.css'
+    selector: 'app-user',
+    standalone: true,
+    imports: [FormsModule, ReactiveFormsModule],
+    templateUrl: './user.component.html',
+    styleUrl: './user.component.css'
 })
 export class UserComponent {
   Username:string = 'Andres';

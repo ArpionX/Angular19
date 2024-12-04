@@ -1,15 +1,11 @@
 import { Component } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
-import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { MenuComponent } from '../menu/menu.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [RouterLink, RouterLinkActive, RouterOutlet, MatMenuModule, MatIconModule, MatButtonModule, MenuComponent],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+    selector: 'app-header',
+    standalone: true,
+    imports: [RouterLink, RouterLinkActive, ],
+    templateUrl: './header.component.html',
+    styleUrl: './header.component.css'
 })
 export class HeaderComponent {
   isMenuOpen:boolean = false;

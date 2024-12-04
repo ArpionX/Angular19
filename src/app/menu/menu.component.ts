@@ -1,14 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { FuturoComponent } from '../futuro/futuro.component';
-import { HomeComponent } from '../home/home.component';
-import { UserComponent } from '../user/user.component';
 @Component({
-  selector: 'app-menu',
-  standalone: true,
-  imports: [RouterLink, HomeComponent, FuturoComponent, UserComponent],
-  templateUrl: './menu.component.html',
-  styleUrl: './menu.component.css'
+    selector: 'app-menu',
+    standalone: true,
+    imports: [],
+    templateUrl: './menu.component.html',
+    styleUrl: './menu.component.css'
 })
 export class MenuComponent {
   @Input() open:boolean = false;
