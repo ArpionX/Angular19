@@ -2,6 +2,8 @@
 <p>home works!</p>
 <p>🐢 all the way down {{ items.length }}</p>
 <a routerLink="hola">wow</a>
+<a routerLink="/galery" fragment="reading-the-full-response" >Go to Section</a>
+
 <div>este es el app component, o todo lo que va a cambiar</div>
 <button></button>
 @if (corriendo) {
@@ -58,3 +60,33 @@
   hola
 </div>
 <app-hijo trabajo="jugador de valo" name="andres" (eventoAggItem)="agregarItemPadre($event)" />
+<div>
+  hola {{showTrialDuration()}}
+</div>
+<button (click)="activateTrial()">
+  activar Prueba
+</button>
+<div>
+  Username : {{username()}}
+</div>
+<button (click)="activar()">desactivar el valor es {{desactivado()}}</button>
+<button class="block p-3 boton" (click)="incrementar()">INCREMENTAR</button>
+<div>costo total {{costoTotal}} multiplicacion {{multiplicacion}} cuenta {{count()}} cuenta {{cuenta()}} doble cuenta{{doubleCount()}} desactivar false{{desactivar()}}</div>
+<div>
+  el estado es {{falso()}}
+</div>
+<button class="boton" (click)="cambiarFalso()">cambiar estado, mostrar mensaje</button>
+<div>
+  {{conditionalCount()}}
+</div>
+@if (showCount()) {
+  <p>la cuenta es {{count()}}</p>
+}@else {
+  <p>Nothing to see here!</p>
+}
+<a routerLink="hola">wow</a>
+<a routerLink="/galery" routerLinkActive="Active" ariaCurrentWhenActive="page" class="">Galeria</a>
+<h1 id="reading-the-full-response">Reading the Full Response</h1>
+
+
+

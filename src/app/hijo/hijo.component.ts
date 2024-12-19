@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, input, Input, Output } from '@angular/core';
 
 @Component({
     selector: 'app-hijo',
@@ -9,6 +9,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class HijoComponent {
   @Input() trabajo:string ='';
   @Input() name:string = '';
+  value = input(0);
+
   @Output() eventoIncremento = new EventEmitter<number>();
   @Output() eventoAggItem= new EventEmitter<string>();
   //OUTPUT

@@ -9,18 +9,15 @@ export const routes: Routes = [
     title: 'Home',
     component: HomeComponent,
     children: [
-      {
-        path: 'user',
-        title: 'User',
-        component: UserComponent,
-      }
+
     ]
   },
   {
-    path: 'home/:id',
-    redirectTo:'home/:id',
-    pathMatch: 'full',
+    path: 'user',
+    title: 'User',
+    component: UserComponent,
   },
+
   {
     path: 'futuro',
     title: 'Futuro',

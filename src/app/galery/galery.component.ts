@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-galery',
-    imports: [NgOptimizedImage, RouterLink],
+    imports: [NgOptimizedImage, RouterLink, NgOptimizedImage],
     templateUrl: './galery.component.html',
     styleUrl: './galery.component.css'
 })

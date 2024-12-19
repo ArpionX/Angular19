@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 @Component({
     selector: 'app-user',
     standalone: true,
-    imports: [FormsModule, ReactiveFormsModule],
+    imports: [FormsModule, ReactiveFormsModule, RouterLink, RouterLinkActive, ],
     templateUrl: './user.component.html',
     styleUrl: './user.component.css'
 })
 export class UserComponent {
+  constructor(private router: Router){}
   Username:string = 'Andres';
   frameworkFavorito:string = '';
   //Formularios Reactivos y validados
@@ -21,5 +22,7 @@ export class UserComponent {
   handleSubmit(){
     alert(`el nombre es:${this.formularioPerfil.value.name} y el email:${this.formularioPerfil.value.email}`);
   }
-
+  goToFragment() {
+    this.router.navigate(['/my-path'], { fragment: 'reading-the-full-response' });
+  }
 }
