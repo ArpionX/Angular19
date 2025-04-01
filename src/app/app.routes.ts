@@ -10,11 +10,6 @@ export const routes: Routes = [
     ]
   },
   {
-    path: '',
-    redirectTo: 'futuro',
-    pathMatch: 'full',
-  },
-  {
     path:'**',
     component: FuturoComponent,
   }
