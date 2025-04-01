@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 @Component({
     selector: 'app-user',
     standalone: true,
-    imports: [FormsModule, ReactiveFormsModule, RouterLink, RouterLinkActive, ],
+    imports: [FormsModule, ReactiveFormsModule, RouterLink ],
     templateUrl: './user.component.html',
     styleUrl: './user.component.css'
 })

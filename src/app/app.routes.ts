@@ -30,11 +30,11 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'futuro',
     pathMatch: 'full',
   },
   {
     path:'**',
-    component: HomeComponent,
+    component: FuturoComponent,
   }
 ];

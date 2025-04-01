@@ -4,9 +4,9 @@
       <img ngSrc="/assets/FotoMia.png" alt="foto mia" fill="" class="object-cover foto">
     </div>
     <section class="flex flex-col items-start">
-        <h1 class="card__title">Hi, It's <span class="card__sub__text">Andrés</span></h1>
-        <p class="card__subtitle"> I'm a <span class="card__sub__text ">Web Developer</span></p>
-        <p class="card__text">I'm a Front-End Developer enthusiast with a penchant for creating intuitive and dynamic user experience, using Angular as my main tool for development </p>
+        <h1 class="card__title">Hola!, Soy <span class="card__sub__text">Andrés</span></h1>
+        <p class="card__subtitle"> <span class="card__sub__text ">Web Developer</span></p>
+        <p class="card__text">Soy un entusiasta del desarrollo front-end con predilección por crear una experiencia de usuario intuitiva y dinámica, utilizando Angular como mi principal herramienta de desarrollo.</p>
         <div class="flex ">
           <a href="https://www.linkedin.com/in/andres-pozo-97453223a"><img ngSrc="/assets/linkedin.png" alt="img linkedin" width="35" height="35" class="links"></a>
           <a href="https://github.com/ArpionX"><img ngSrc="/assets/github.png" alt="igm git" width="35" height="35" class="links"></a>
@@ -15,10 +15,13 @@
 
     </section>
   </div>
+  <h3 class="subtema p-2 mx-auto ">
+    Skills
+  </h3>
   <div class="slider" style="
     --width: 100px;
     --height: 85px;
-    --quantity: 4;
+    --quantity: 6;
     --duration: 10s;
     ">
     <div class="list">
@@ -26,14 +29,68 @@
       <div class="item" style="--position: 2"><img alt="" ngSrc="/assets/images/slider1_2.png" fill=""></div>
       <div class="item" style="--position: 3"><img alt="" ngSrc="/assets/images/slider1_3.png" fill=""></div>
       <div class="item" style="--position: 4"><img alt="" ngSrc="/assets/images/slider1_4.png" fill=""></div>
+      <div class="item" style="--position: 5"><img alt="" ngSrc="/assets/images/slider1_5.png" fill=""></div>
+      <div class="item" style="--position: 6"><img alt="" ngSrc="/assets/images/slider1_6.png" fill=""></div>
     </div>
   </div>
+
 </main>
 
-<div>
-  skills
+
+<div class="p-2 max-w-screen-sm mx-auto">
+  <h3 class="subtema">Proyectos</h3>
+  <div class="grid grid-cols-1 gap-2">
+    <div class=" rounded-md shadow-gray-400 cajaProyectos "  (click)="expandirProyecto()">
+      <h6 class="text-center pt-3 bg-slate-300 rounded-md">Gestion de Partidos</h6>
+      <div class=" p-2" [class.expandirProyecto]="proyectosExpanded">
+        <p>Proyecto de gestion de un campeonato de fútbol donde conecte una base de datos SQL(SQLServer), con una API en Entity Framework, y esa API a servicios de Angular para traer los datos, mediante metodos Http Post, Get, Put, Delete. </p>
+        <div class="w-full">
+          <img class="mx-auto" alt="" ngSrc="/assets/imagenes/proyecto2.png" width="500" height="250" >
+        </div>
+        <p>Tecnologias Usadas:</p>
+        <ul class="flex flex-wrap gap-2 mb-2">
+          <li><img src="/assets/images/slider1_1.png" alt="angular" width="40" height="35"></li>
+          <li><img src="/assets/images/slider1_2.png" alt="angular" width="30" height="35"></li>
+          <li><img src="/assets/images/slider1_3.png" alt="angular" width="35" height="35"></li>
+          <li><img src="/assets/images/slider1_4.png" alt="angular" width="30" height="35"></li>
+          <li><img src="/assets/images/slider1_5.png" alt="angular" width="40" height="25"></li>
+          <li><img class="rounded-full" src="/assets/images/slider1_6.png" alt="angular" width="60" height="35"></li>
+
+        </ul>
+        <a class="underline text-indigo-700" href="https://crud-ff3a1.web.app/">Enlace Tienda de Productos Aqui</a>
+
+      </div>
+
+    </div>
+    <div class=" rounded-md shadow-gray-400 cajaProyectos text-pretty"  (click)="expandirProyecto()">
+      <h6 class="text-center pt-3 bg-slate-300 rounded-md ">Tienda de Productos</h6>
+      <div class=" p-2" [class.expandirProyecto]="proyectosExpanded">
+        <p>Proyecto de tienda en linea donde probaba las bases de Angular y enfocado principalmente en Front-End.</p>
+        <div class="w-full">
+          <img class="mx-auto" alt="" ngSrc="/assets/imagenes/proyecto1.png" width="500" height="250">
+        </div>
+        <p>Tecnologias Usadas:</p>
+        <ul class="flex flex-wrap gap-2 mb-2">
+          <li><img src="/assets/images/slider1_1.png" alt="angular" width="40" height="35"></li>
+          <li><img src="/assets/images/slider1_2.png" alt="angular" width="30" height="35"></li>
+          <li><img src="/assets/images/slider1_3.png" alt="angular" width="35" height="35"></li>
+          <li><img src="/assets/images/slider1_4.png" alt="angular" width="30" height="35"></li>
+        </ul>
+        <a class="underline text-indigo-700" href="https://home-angular-ea14c.web.app/">Enlace Tienda de Productos Aqui</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </div>
-<div>
-  proyectos
+<div class="p-2">
+  <h3 class="subtema">Contacto</h3>
+  <p>Si deseas contactarme puedes hacerlo a través de mi correo electronico o número celular:</p>
+  <ul>
+    <li><span class="card__sub__text">{{correo}}</span></li>
+    <li><p>{{numero}}</p></li>
+  </ul>
+
 </div>
-contactame
