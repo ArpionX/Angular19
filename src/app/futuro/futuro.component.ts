@@ -1,9 +1,8 @@
-import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 @Component({
     selector: 'app-futuro',
     standalone: true,
-    imports: [NgOptimizedImage],
+    imports: [],
     templateUrl: './futuro.component.html',
     styleUrl: './futuro.component.css'
 })

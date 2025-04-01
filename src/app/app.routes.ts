@@ -3,14 +3,7 @@ import { FuturoComponent } from './futuro/futuro.component';
 export const routes: Routes = [
   {
     path: '',
-    title: 'home page',
-    component: FuturoComponent,
-    children: [
-
-    ]
-  },
-  {
-    path:'**',
+    title: 'home',
     component: FuturoComponent,
   }
 ];
