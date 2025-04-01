@@ -1,32 +1,13 @@
 import { Routes } from '@angular/router';
 import { FuturoComponent } from './futuro/futuro.component';
-import { GaleryComponent } from './galery/galery.component';
-import { HomeComponent } from './home/home.component';
-import { UserComponent } from './user/user.component';
 export const routes: Routes = [
   {
     path: '',
-    title: 'Home',
-    component: HomeComponent,
+    title: '',
+    component: FuturoComponent,
     children: [
 
     ]
-  },
-  {
-    path: 'user',
-    title: 'User',
-    component: UserComponent,
-  },
-
-  {
-    path: 'futuro',
-    title: 'Futuro',
-    component: FuturoComponent,
-  },
-  {
-    path: 'galery',
-    title: 'Galery',
-    component: GaleryComponent,
   },
   {
     path: '',
